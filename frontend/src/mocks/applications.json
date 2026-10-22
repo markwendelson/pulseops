@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Payroll Transaction Engine",
+    "tier": "Microservice",
+    "status": "Critical",
+    "healthPercent": 78.4,
+    "requestsPerSec": 1840,
+    "avgLatencyMs": 412,
+    "errorRatePercent": 4.82,
+    "instancesCount": 6,
+    "endpoints": ["/api/v1/payroll/disburse", "/api/v1/payroll/validate"]
+  },
+  {
+    "id": 2,
+    "name": "Global Identity & SSO Gateway",
+    "tier": "API Gateway",
+    "status": "Healthy",
+    "healthPercent": 99.9,
+    "requestsPerSec": 5400,
+    "avgLatencyMs": 38,
+    "errorRatePercent": 0.02,
+    "instancesCount": 12,
+    "endpoints": ["/oauth/token", "/api/v1/auth/verify"]
+  },
+  {
+    "id": 3,
+    "name": "Stripe & Swift Settlement Bridge",
+    "tier": "Microservice",
+    "status": "Warning",
+    "healthPercent": 94.2,
+    "requestsPerSec": 920,
+    "avgLatencyMs": 189,
+    "errorRatePercent": 1.15,
+    "instancesCount": 4,
+    "endpoints": ["/api/v1/settlement/execute"]
+  },
+  {
+    "id": 4,
+    "name": "Enterprise Web Console",
+    "tier": "Frontend",
+    "status": "Healthy",
+    "healthPercent": 99.98,
+    "requestsPerSec": 3200,
+    "avgLatencyMs": 24,
+    "errorRatePercent": 0.05,
+    "instancesCount": 8,
+    "endpoints": ["/"]
+  }
+]

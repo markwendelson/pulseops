@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "High CPU Core Contention (> 92%) on PAYROLL-API",
+    "severity": "Critical",
+    "source": "Host Metrics Collector",
+    "targetResource": "PAYROLL-API",
+    "timestamp": "2026-10-21T09:39:10Z",
+    "status": "Active",
+    "assignedTo": "DevOps OnCall (SRE)"
+  },
+  {
+    "id": 2,
+    "title": "HTTP 502 Rate Spike (> 4.5%) on /api/v1/payroll/disburse",
+    "severity": "Critical",
+    "source": "Envoy Ingress Monitor",
+    "targetResource": "Payroll Transaction Engine",
+    "timestamp": "2026-10-21T09:36:20Z",
+    "status": "Active",
+    "assignedTo": "Sarah Connor"
+  },
+  {
+    "id": 3,
+    "title": "TimescaleDB Hypertable Chunk Compaction Lag Warning",
+    "severity": "Warning",
+    "source": "TimescaleDB Storage Analyzer",
+    "targetResource": "TIMESCALEDB-METRICS-01",
+    "timestamp": "2026-10-21T09:20:00Z",
+    "status": "Acknowledged",
+    "assignedTo": "DBA Team"
+  },
+  {
+    "id": 4,
+    "title": "Memory Utilization Threshold Warning (> 80%)",
+    "severity": "Warning",
+    "source": "Host Metrics Collector",
+    "targetResource": "PAYMENT-GW-02",
+    "timestamp": "2026-10-21T08:58:00Z",
+    "status": "Active",
+    "assignedTo": null
+  }
+]

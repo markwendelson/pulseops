@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "channel": "Slack (#sre-war-room)",
+    "target": "#sre-war-room",
+    "alertId": 1,
+    "status": "Delivered",
+    "timestamp": "2026-10-21T09:39:15Z"
+  },
+  {
+    "id": 2,
+    "channel": "PagerDuty",
+    "target": "OnCall SRE Escalation Policy",
+    "alertId": 1,
+    "status": "Acked",
+    "timestamp": "2026-10-21T09:39:20Z"
+  },
+  {
+    "id": 3,
+    "channel": "Email",
+    "target": "infra-team@company.internal",
+    "alertId": 2,
+    "status": "Delivered",
+    "timestamp": "2026-10-21T09:36:25Z"
+  }
+]

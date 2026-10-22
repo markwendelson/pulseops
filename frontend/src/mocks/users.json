@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Connor",
+    "email": "sarah.connor@pulseops.internal",
+    "role": "Lead SRE",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150"
+  },
+  {
+    "id": 2,
+    "name": "Alex Mercer",
+    "email": "alex.mercer@pulseops.internal",
+    "role": "DevOps Engineer",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150"
+  },
+  {
+    "id": 3,
+    "name": "David Chen",
+    "email": "david.chen@pulseops.internal",
+    "role": "Database Administrator",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150"
+  }
+]

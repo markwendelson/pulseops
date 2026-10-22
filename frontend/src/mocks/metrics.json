@@ -1,0 +1,16 @@
+{
+  "cpuTimeSeries": [
+    { "timestamp": "09:00", "PAYROLL-API": 64, "AUTH-SVC-01": 28, "PAYMENT-GW-02": 55 },
+    { "timestamp": "09:10", "PAYROLL-API": 72, "AUTH-SVC-01": 30, "PAYMENT-GW-02": 58 },
+    { "timestamp": "09:20", "PAYROLL-API": 88, "AUTH-SVC-01": 31, "PAYMENT-GW-02": 67 },
+    { "timestamp": "09:30", "PAYROLL-API": 94, "AUTH-SVC-01": 33, "PAYMENT-GW-02": 79 },
+    { "timestamp": "09:40", "PAYROLL-API": 93, "AUTH-SVC-01": 32, "PAYMENT-GW-02": 81 }
+  ],
+  "requestThroughput": [
+    { "timestamp": "09:00", "requests": 8400, "errors": 12 },
+    { "timestamp": "09:10", "requests": 9200, "errors": 18 },
+    { "timestamp": "09:20", "requests": 11400, "errors": 140 },
+    { "timestamp": "09:30", "requests": 12800, "errors": 490 },
+    { "timestamp": "09:40", "requests": 11360, "errors": 380 }
+  ]
+}

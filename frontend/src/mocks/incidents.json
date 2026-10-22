@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "ticketNumber": "INC-8891",
+    "title": "Payroll API elevated latency & thread exhaustion during batch disbursement",
+    "severity": "P1 - Blocker",
+    "status": "Investigating",
+    "impactedServices": ["Payroll Transaction Engine", "PAYROLL-API"],
+    "openedAt": "2026-10-21T09:24:00Z",
+    "resolvedAt": null,
+    "commander": "Sarah Connor (Lead SRE)",
+    "rootCauseCandidate": "Connection pool starvation on DB transaction pool during scheduled salary run.",
+    "aiSummary": "Correlated 4 metric anomalies: High CPU (93%), Connection Pool Wait (850ms), and 502 Spike. Suggest scaling horizontal pods + increasing MaxPoolSize by 20%."
+  },
+  {
+    "id": 2,
+    "ticketNumber": "INC-8884",
+    "title": "EU Gateway regional transient network jitter",
+    "severity": "P3 - Medium",
+    "status": "Mitigating",
+    "impactedServices": ["PAYMENT-GW-02"],
+    "openedAt": "2026-10-21T07:45:00Z",
+    "resolvedAt": null,
+    "commander": "Alex Mercer",
+    "rootCauseCandidate": "ISP routing table degradation at Frankfurt AWS edge point.",
+    "aiSummary": "Packet loss reduced from 12% to 0.4% following BGP rerouting."
+  }
+]

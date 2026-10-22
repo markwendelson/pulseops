@@ -1,0 +1,24 @@
+[
+  {
+    "id": "rep-01",
+    "name": "Monthly SLA & Availability Report - October 2026",
+    "period": "2026-10-01 to 2026-10-21",
+    "overallAvailability": 99.94,
+    "slaTarget": 99.90,
+    "slaBreaches": 0,
+    "mttdMinutes": 2.4,
+    "mttaMinutes": 4.8,
+    "mttrMinutes": 18.2
+  },
+  {
+    "id": "rep-02",
+    "name": "Quarterly MTTR & Root Cause Distribution Q3 2026",
+    "period": "2026-07-01 to 2026-09-30",
+    "overallAvailability": 99.96,
+    "slaTarget": 99.90,
+    "slaBreaches": 1,
+    "mttdMinutes": 3.1,
+    "mttaMinutes": 5.2,
+    "mttrMinutes": 22.4
+  }
+]

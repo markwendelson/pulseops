@@ -1,0 +1,71 @@
+## Build and Compilation Results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio / Roslyn / MSBuild Files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.ide/
+
+## Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+## Rider / JetBrains
+.idea/
+*.DotSettings.user
+
+## OS Generated Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+## .NET Core / ASP.NET Specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+*.snupkg
+
+## Secrets & Local Environment Configs
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Production.json
+*.local.json
+.env
+.env.*
+!.env.example
+
+## Test & Coverage Output
+TestResults/
+[Tt]est[Rr]esult*/
+coverage/
+*.cobertura.xml
+*.opencover.xml
+
+## Entity Framework & Database Migrations / Local DBs
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
