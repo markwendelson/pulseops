@@ -68,12 +68,16 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("SreOrDevOps", policy => policy.RequireRole("Admin", "SRE", "DevOps"));
 });
 
-// 5. Configure CORS for Vite React frontend
+// 5. Configure CORS for the React frontend
+// Override in containers with: Cors__AllowedOrigins__0=http://your-frontend-host
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
+    ?? new[] { "http://localhost:5173", "http://localhost:3000" };
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("PulseOpsCorsPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "http://localhost:3000")
+        policy.WithOrigins(allowedOrigins)
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();
@@ -120,7 +124,7 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Configuration.GetValue<bool>("EnableSwagger"))
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
