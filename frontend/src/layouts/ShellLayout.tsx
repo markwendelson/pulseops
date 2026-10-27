@@ -9,14 +9,13 @@ import {
   AppWindow, 
   Layers, 
   Search, 
-  Bell, 
   RefreshCw,
   Sun,
   Moon,
   LogOut,
   ShieldAlert
 } from 'lucide-react';
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
 import { UserProfile } from '../services/authService';
@@ -29,7 +28,6 @@ interface ShellLayoutProps {
 
 export const ShellLayout: React.FC<ShellLayoutProps> = ({ currentUser, onLogout, children }) => {
   const { theme, toggleTheme } = useTheme();
-  const location = useLocation();
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     `w-full flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-semibold transition ${

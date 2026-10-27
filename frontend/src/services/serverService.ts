@@ -1,6 +1,5 @@
 import { ApiService, delay } from './apiService';
 import serversData from '../mocks/servers.json';
-import { ServerMetric } from '../types';
 
 export class ServerService extends ApiService {
   async getServers(): Promise<any[]> {

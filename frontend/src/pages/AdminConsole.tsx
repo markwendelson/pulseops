@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { 
   ShieldAlert, 
-  Sliders, 
   Plus, 
   Database, 
   Activity, 
   CheckCircle, 
   XCircle, 
   Users, 
-  Cpu, 
   Settings,
   Lock,
-  ArrowUpRight,
-  Server
+  ArrowUpRight
 } from 'lucide-react';
 import { UserProfile } from '../services/authService';
 
