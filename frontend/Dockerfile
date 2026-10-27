@@ -5,8 +5,9 @@ FROM node:20-alpine AS build
 WORKDIR /app
 
 # Build-time environment variables for Vite
+# Defaults to relative '/api' so Nginx reverse-proxies to the backend container automatically
 ARG VITE_USE_MOCKS=false
-ARG VITE_API_BASE_URL=http://localhost:8080/api
+ARG VITE_API_BASE_URL=/api
 ARG VITE_TELEMETRY_REFRESH_INTERVAL=10000
 ARG VITE_APP_TITLE=PulseOps
 ARG VITE_APP_ENV=production
@@ -30,7 +31,7 @@ RUN npm run build
 # ==========================================
 FROM nginx:stable-alpine AS final
 
-# Copy custom Nginx SPA config
+# Copy custom Nginx SPA + reverse proxy config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy built static assets from build stage

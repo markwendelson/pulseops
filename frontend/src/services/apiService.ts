@@ -1,7 +1,7 @@
 // Base API client and mock-toggle abstraction for PulseOps services
 
 const USE_MOCKS = import.meta.env.VITE_USE_MOCKS !== 'false';
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 export const delay = (ms: number = 80): Promise<void> => 
   new Promise((resolve) => setTimeout(resolve, ms));

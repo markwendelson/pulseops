@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT:-Production}
+      - ASPNETCORE_URLS=http://+:8080
+      - UseInMemoryMockDb=${USE_IN_MEMORY_MOCK_DB:-true}
+      - EnableSwagger=${ENABLE_SWAGGER:-true}
+      - JwtSettings__Secret=${JWT_SECRET:-PulseOpsSuperSecretEnterpriseSecurityKey2026!}
+    expose:
+      - "8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_USE_MOCKS=${VITE_USE_MOCKS:-false}
+        - VITE_API_BASE_URL=${VITE_API_BASE_URL:-/api}
+        - VITE_TELEMETRY_REFRESH_INTERVAL=${VITE_TELEMETRY_REFRESH_INTERVAL:-10000}
+        - VITE_APP_TITLE=${VITE_APP_TITLE:-PulseOps}
+        - VITE_APP_ENV=${VITE_APP_ENV:-production}
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
